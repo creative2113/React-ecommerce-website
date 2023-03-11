@@ -1,0 +1,192 @@
+:root {
+    --light : #354259; 
+    --veryLight : #ebe0cc;
+    --superLight : #C2DED1;
+    --superDark : #000000e6; 
+    --dark : #423F3E;
+    --lessDark : #423F3E;
+    --pitchDark : #171010;
+    --white: #ffffff;
+}
+
+.themeLogo {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.darkHeader {
+    background-color: var(--dark);
+    color: var(--white) !important;
+}
+
+.darkFilter {
+    background-color: var(--superDark);
+}
+
+.darkCard {
+    background-color: var(--lessDark);
+    color: var(--white) !important;
+}
+
+.darkBody {
+    background-color: var(--pitchDark);
+}
+
+.lightHeader {
+    background-color: var(--veryLight);
+}
+
+.lightFilter {
+    background-color: var(--light);
+}
+
+.lightCard {
+    background-color: var(--superLight);
+}
+
+.home {
+    display: flex;
+}
+
+.productContainer {
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 8rem;
+    margin-left: 306px;
+}
+
+.header {
+    position: fixed;
+    width: -webkit-fill-available;
+    z-index: 1;
+}
+
+.lowerNav {
+    position: fixed;
+    height: 46px;
+    width: -webkit-fill-available;
+    z-index: 1;
+    color: var(--white);
+}
+
+.filters {
+    top: 126px;
+    z-index: 1;
+    position: fixed;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 306px;
+    height: 90vh;
+}
+
+.filters > span {
+    padding-bottom: 20px;
+}
+
+.title {
+    font-size: 30px;
+}
+
+.product {
+    /* grow shrink basis */
+    flex: 1 0 23%; 
+    margin: 10px;
+}
+
+.product img {
+    transition: filter 0.3s;
+}
+
+.product img:hover {
+    filter: contrast(150%);
+}
+
+.cartItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px 20px 20px;
+    /* margin-bottom: 20px; */
+}
+
+.cartItemImg {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover; /* The image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit */  
+}
+
+/*
+If an element has flex: 1, it signifies that the width of all other elements
+will be the same as their content, but the element with flex: 1 will be 
+given the remaining full space.
+*/
+.cartItemDetail {
+    display: flex;
+    flex: 1;
+    padding: 0 20px;
+    flex-direction: column;
+}
+
+.summary {
+    right: 0;
+    z-index: 0;
+}
+
+.filterMenuIcon {
+    cursor: pointer;
+}
+
+.navIcons {
+    position: absolute !important;
+    right: 33px;
+}
+
+.navLeftItems {
+    position: absolute !important;
+    left: 33px;
+}
+
+.searchBar {
+    position: absolute !important;
+    right: 141px;
+    width: 33rem;
+}
+
+.searchIcon {
+    cursor: pointer;
+    padding-left: 18px;
+}
+
+.checkoutCard {
+    display: flex;
+    justify-content: flex-end;
+    margin: auto;
+}
+
+@media screen and (min-width: 965px) {
+    .searchIcon {
+        display: none;
+    }
+}
+@media screen and (max-width: 965px) {
+    .productContainer {
+        margin-left: 0;
+    }
+  }
+
+@media screen and (max-width: 760px) {
+.product {
+    flex-basis: 30%;
+}
+}
+
+@media screen and (max-width: 499px) {
+    .product {
+        flex-basis: 100%;
+    }
+}
