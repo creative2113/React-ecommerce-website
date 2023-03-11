@@ -18,7 +18,7 @@ const SingleProduct = ({ prod }) => {
       position: "top-left",
       autoClose: 1500,
       closeOnClick: true
-      });
+    });
   ;
 
   return (
