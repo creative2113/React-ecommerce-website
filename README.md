@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# A React E-Commerce Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About the project -
 
-## Available Scripts
+- This is a mock e-commerce website built using React, with the main functionality being the shopping cart. This project implements different React hooks such as useState(), useEffect(), useContext() and a custom hook, as well as context API and React routing. The app uses fake data from the FakerJS/Faker API and is deployed on Firebase hosting.
 
-In the project directory, you can run:
+- Each page has a top navigation bar with the app logo, which redirects the user to the home page upon clicking. It also includes a working search bar, which renders all the matching products on typing the search query, both on the home page and the cart page. A cart button shows the count of products added to the cart and a dropdown with all those products.
 
-### `npm start`
+- There is a lower navigation bar which has a home icon that also redirects the user to the home page, and a dark mode button that allows users to toggle between day mode and dark mode.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- The home page of this app contains a variety of fake e-commerce product data with an "add to cart" button and a "remove from cart" button. Additionally, the home page features a left sidebar with all the filters, including:
+i) Ascending - re-renders product data in ascending order.
+ii) Descending - re-renders product data in descending order.
+iii) Include out of stock items.
+iv) Fast delivery only.
+v) Rating.
+There is also a "clear filters" button that clears all the currently applied filters.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- The user can add or delete as many products as they want to/from the cart and view the cart.
 
-### `npm test`
+- The user can view the cart page with all the products added to the cart, and the subtotal is displayed, along with a fake checkout button. Users can also delete items from the checkout page or increase the number of items.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- This app has a total of 2 pages: the home page and the cart page.
 
-### `npm run build`
+- This application is fully responsive.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Live project link -
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+https://shopxreact.web.app/ 
+or
+https://shopxreact.firebaseapp.com/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Some sceenshots -
 
-### `npm run eject`
+![image](https://user-images.githubusercontent.com/67649413/224531899-7355b63b-87ce-4c91-a662-b3b011cc0aba.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![image](https://user-images.githubusercontent.com/67649413/224532030-2e269498-05dc-41c5-a1f9-07b62b55a97c.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![image](https://user-images.githubusercontent.com/67649413/224532051-e49421ef-9795-4234-b880-64d3761deef8.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![image](https://user-images.githubusercontent.com/67649413/224532082-fec01009-34b6-4d32-a600-e889ce8375e5.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![image](https://user-images.githubusercontent.com/67649413/224532103-6c3f2e58-98a6-488e-981f-10a0a5add8a5.png)
 
-## Learn More
+![image](https://user-images.githubusercontent.com/67649413/224532118-3109c582-9ebe-4b4a-b299-20ad059ad5e3.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![image](https://user-images.githubusercontent.com/67649413/224532173-6f66c9e5-e6a9-44c0-b7ce-196b10fd8da7.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![image](https://user-images.githubusercontent.com/67649413/224532191-2e48fa88-ca10-450c-8255-31ca701619a7.png)
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
