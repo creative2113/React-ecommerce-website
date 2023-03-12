@@ -55,6 +55,7 @@
     justify-content: space-around;
     margin-top: 7.9rem;
     margin-left: 306px;
+    z-index: -1;
 }
 
 .header {
@@ -73,7 +74,6 @@
 
 .filters {
     top: 126px;
-    z-index: 1;
     position: fixed;
     color: white;
     padding: 20px;

@@ -60,7 +60,7 @@ const Header = () => {
                                     <Badge bg='success'>{cart.length}</Badge>
                                 </Dropdown.Toggle>
 
-                                <Dropdown.Menu style={{ minWidth: 370, left: '-17.7rem' }}>
+                                <Dropdown.Menu style={{ minWidth: 370, left: '-17.7rem', zIndex: 2 }}>
                                     {
                                         cart.length > 0 ? 
                                         (
