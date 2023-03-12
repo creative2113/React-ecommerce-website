@@ -1,3 +1,5 @@
+// Cart component containing the min cart page / checkout page
+
 import React, { useEffect, useState } from 'react'
 import { Button, Card, Col, Image, ListGroup, Row } from 'react-bootstrap';
 import { CartState } from '../context/CartContext';
@@ -15,8 +17,9 @@ const Cart = () => {
     productState: { searchQuery }
   } = CartState();
 
-  const [total, setTotal] = useState();
+  const [total, setTotal] = useState(); //for the subtotal
 
+  // when cart items will get changed this will get executed, calculating the subtotal
   useEffect(() => {
     setTotal(
       cart.reduce(

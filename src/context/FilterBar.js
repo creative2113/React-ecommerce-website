@@ -1,3 +1,5 @@
+// context for managing the filterbar / sidebar visibility
+
 import React, { createContext, useContext, useState } from 'react';
 
 const FilterBarState = createContext();
