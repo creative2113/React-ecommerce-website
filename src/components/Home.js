@@ -6,11 +6,6 @@ import SingleProduct from './SingleProduct';
 import './styles.css';
 
 const Home = () => {
-  // const { state } = CartState();
-  /**
-   * here we are only concerned about the products, 
-   * so we will destructure and only get the products from state
-   */
   const { 
     state: { products }, //destructuring
     productState: { sort, byStock, byFastDelivery, byRating, searchQuery }
@@ -21,13 +16,13 @@ const Home = () => {
   const transformProducts = () => {
     let sortedProducts = products;
 
-    if(sort) {
+    if(sort) { //sort the products if sort = true
       sortedProducts = sortedProducts.sort((a, b) => (
         sort === 'lowToHigh' ? (a.price-b.price) : (b.price-a.price)
       ));
     }
 
-    if(!byStock) {
+    if(!byStock) { 
       sortedProducts = sortedProducts.filter(prod => prod.inStock);
     }
 

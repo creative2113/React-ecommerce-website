@@ -11,16 +11,20 @@ import SearchBar from './SearchBar';
 
 const Header = () => {
 
-    const windowSize = useWindowSize();
+    const windowSize = useWindowSize(); //getting windowSize from useWindowSize() custom hook
 
     const { 
-        state: {cart}, 
-        dispatch
-    } = CartState();
+        state: {cart}, //for getting the cart data
+        dispatch //for updating the data
+    } = CartState(); 
 
-    const {theme, setTheme} = useTheme();
+    const {theme, setTheme} = useTheme(); //getting the current theme from ThemeContext
 
-    const themeHandler = () => {
+    const {visible, setVisible} = useFilterBarState(); //visibility status of the sidebar
+
+    const [searchBarVisible, setsearchBarVisible] = useState(false); //searchbar (below searchbar- the one on smaller screen) visibility status 
+
+    const themeHandler = () => { //toggles theme
         if(theme === 'light') {
             setTheme('dark');
             return;
@@ -28,32 +32,27 @@ const Header = () => {
         setTheme('light');
     }
 
-    const {visible, setVisible} = useFilterBarState();
-
-    const [searchBarVisible, setsearchBarVisible] = useState(false);
-
     return (
         <>
             <div className='header'>
+                {/* Top navbar STARTS ------------ */}
                 <Navbar style={{height: 80}} className={`${theme === 'light' ? 'lightHeader' : 'darkHeader'}`}>
                     <Container>
                         <div className='navLeftItems'>
-                            {/* <span  
-                                style={{display: windowSize.width > 965 && 'none'}} 
-                                className='filterMenuIcon' 
-                                onClick={() => setVisible(!visible)}
-                            >
-                                <FaBars fontSize='25px' />
-                            </span> */}
+                            {/* Containg the logo */}
                             <Navbar.Brand style={{color: theme === 'dark' && 'white'}}>
-                                <Link to='/'><AiOutlineShoppingCart fontSize='50px'/>ShopX</Link>
+                                <Link to='/'>
+                                    <AiOutlineShoppingCart fontSize='50px'/> ShopX
+                                </Link>
                             </Navbar.Brand>
                         </div>
 
+                        {/* only show the searchabr on larger screen (width > 965px) */}
                         {
                             windowSize.width > 965 && <SearchBar classes='searchBar' />
                         }
 
+                        {/* Containg the cart icon with dropdown of all the products in the cart */}
                         <Nav className='navIcons'>
                             <Dropdown>
                                 <Dropdown.Toggle variant="success">
@@ -107,21 +106,33 @@ const Header = () => {
                         </Nav>
                     </Container>
                 </Navbar>
+                {/* ------------ Top navbar ENDS */}
 
+                {/* Lower navbar STARTS ------------ */}
                 <Navbar bg='dark' variant='dark' className="lowerNav">
+
                     <Container>
 
+                        {/* - Hamberger icon for sidebar toggling on smaller sceen
+                            - Only visible on smaller sceen ( width < 965) */}
                         <div 
-                            style={{display: windowSize.width > 965 && 'none'}} 
                             className='navLeftItems filterMenuIcon' 
+                            style={{display: windowSize.width > 965 && 'none'}} 
                             onClick={() => setVisible(!visible)}
                         >
                             <FaBars fontSize='25px' />
                         </div>
+
+                        {/* Containing the search bar / search icon, home button and theme button */}
                         <Nav className='navIcons'>
+
+                            {/* - Search bar for smaller screen
+                                - Only visible on smaller sceen and when searchBarVisible = true  */}
                             {
                                 searchBarVisible && windowSize.width <= 965 && <SearchBar />
                             }
+
+                            {/* search button */}
                             <span className='searchIcon m-auto' onClick={() => setsearchBarVisible(!searchBarVisible)}>
                                 {
                                     !searchBarVisible ? 
@@ -130,19 +141,23 @@ const Header = () => {
                                 }
                     
                             </span>
+
+                            {/* Home button */}
                             <Link to='/'>
                                 <FaHome fontSize='25px' className='ms-3 mt-2' />
                             </Link>
                             
+                            {/* Theme button */}
                             <span onClick={themeHandler} className='themeLogo ms-3 mt-1'>
                             {
-                                theme === 'light' ? <FaMoon  /> : <FaSun  />
+                                theme === 'light' ? <FaMoon /> : <FaSun />
                             }
                             </span>
 
                         </Nav>
                     </Container>
                 </Navbar>
+                {/* ------------ Lower navbar ENDS */}
             </div>
         </>
     )

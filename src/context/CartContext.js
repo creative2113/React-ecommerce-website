@@ -1,3 +1,5 @@
+// context for managing the cart state
+
 import React, { createContext, useContext, useReducer } from 'react'
 import { faker } from '@faker-js/faker';
 import { cartReducer, productReducer } from './Reducers';
@@ -14,8 +16,8 @@ faker.seed(99);
 
 const CartContext = ({ children }) => {
 
-  //...Array(20) will create an arry with 20 undefined elements
-  const products = [...Array(20)].map(() => ({
+  // getting fake data from fakerjs api
+  const products = [...Array(20)].map(() => ({ //...Array(20) will create an arry with 20 undefined elements
     id: faker.datatype.uuid(),
     name: faker.commerce.productName(),
     price: faker.commerce.price(),

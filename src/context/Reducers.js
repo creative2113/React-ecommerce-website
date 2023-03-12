@@ -1,4 +1,4 @@
-//containing the main reducer function
+//containing the main reducer functions for CART
 
 /**
  * Reducers take in two things: previous state and an action. 

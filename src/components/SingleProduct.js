@@ -1,3 +1,5 @@
+// conating template for a single product
+
 import React from 'react'
 import { Button, Card } from 'react-bootstrap';
 import { CartState } from '../context/CartContext';
@@ -6,19 +8,20 @@ import { toast } from 'react-toastify';
 import { useTheme } from '../context/ThemeContextProvider';
 import 'react-toastify/dist/ReactToastify.css';
 
-const SingleProduct = ({ prod }) => {
+const SingleProduct = ({ prod }) => { //getting a product object as a prop
 
   //getting the cart from state, and the dispatch function
   const { state: { cart }, dispatch } = CartState();
 
   const { theme } = useTheme();
   
-  const notifySuccess = (message) => 
+  const notifySuccess = (message) => //success notification on adding / removing product from the cart 
     toast.success(message, {
       position: "top-left",
       autoClose: 1500,
       closeOnClick: true
-    });;
+    });
+  ;
 
   return (
     <>

@@ -1,3 +1,5 @@
+// Sidebar Component
+
 import React from 'react'
 import { Button, Form } from 'react-bootstrap'
 import { CartState } from '../context/CartContext';
@@ -10,7 +12,8 @@ const Filters = () => {
     const { productState : {
                 byStock, byFastDelivery, sort, byRating
             }, 
-            productDispatch } = CartState();
+            productDispatch 
+    } = CartState();
 
     const { theme } = useTheme();
 

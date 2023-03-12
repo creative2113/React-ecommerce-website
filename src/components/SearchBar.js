@@ -1,3 +1,5 @@
+//searchbar component
+
 import React from 'react'
 import { FormControl, Navbar } from 'react-bootstrap'
 import { CartState } from '../context/CartContext';
