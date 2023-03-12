@@ -75,7 +75,7 @@
 .filters {
     top: 126px;
     position: fixed;
-    color: white;
+    color: var(--white);
     padding: 20px;
     display: flex;
     flex-direction: column;
