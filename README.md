@@ -6,7 +6,7 @@
 
 - Each page has a top navigation bar with the app logo, which redirects the user to the home page upon clicking. It also includes a working search bar, which renders all the matching products on typing the search query, both on the home page and the cart page. A cart button shows the count of products added to the cart and a dropdown with all those products.
 
-- There is a lower navigation bar which has a home button that also redirects the user to the home page, and a dark mode button that allows users to toggle between day mode and dark mode.
+- There is a lower navigation bar which has a home button that also redirects the user to the home page, and a dark mode button that allows users to toggle between light mode and dark mode.
 
 - The home page of this app contains a variety of fake e-commerce product data with an "add to cart" button and a "remove from cart" button. Additionally, the home page features a left sidebar with all the filters, including:
 i) Ascending - re-renders product data in ascending order.
