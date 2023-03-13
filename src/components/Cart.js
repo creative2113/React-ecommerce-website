@@ -35,6 +35,7 @@ const Cart = () => {
       products = products.filter(prod => prod.name.toLowerCase().includes(searchQuery.toLowerCase()));
     }
     return products;
+    
   }
 
   return (
