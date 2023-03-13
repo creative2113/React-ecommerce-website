@@ -30,7 +30,7 @@ https://shopxreact.web.app/
 or
 https://shopxreact.firebaseapp.com/
 
-## Some sceenshots -
+## Preview -
 
 ![image](https://user-images.githubusercontent.com/67649413/224531899-7355b63b-87ce-4c91-a662-b3b011cc0aba.png)
 
