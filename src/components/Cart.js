@@ -19,7 +19,6 @@ const Cart = () => {
 
   const [total, setTotal] = useState(); //for the subtotal
   
-
   // when cart items will get changed this will get executed, calculating the subtotal
   useEffect(() => {
     setTotal(
