@@ -1,6 +1,5 @@
 import React from 'react'
 import { CartState } from '../context/CartContext'
-import { useTheme } from '../context/ThemeContextProvider';
 import Filters from './Filters';
 import SingleProduct from './SingleProduct';
 import './styles.css';
@@ -10,8 +9,6 @@ const Home = () => {
     state: { products }, //destructuring
     productState: { sort, byStock, byFastDelivery, byRating, searchQuery }
   } = CartState();
-
-  const { theme } = useTheme();
 
   const transformProducts = () => {
     let sortedProducts = products;
@@ -44,14 +41,14 @@ const Home = () => {
   }
   return (
     <div className='home'>
-      <Filters />
-      <div className={`productContainer ${theme === 'dark' && 'darkBody'}`}>
+      <div className='productContainer'>
         {
           transformProducts().map((prod) => {
             return <SingleProduct key={prod.id} prod={prod} />
           })
         }
       </div>
+      <Filters />
     </div>
   )
 }

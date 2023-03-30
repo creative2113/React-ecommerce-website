@@ -35,6 +35,7 @@ const Cart = () => {
       products = products.filter(prod => prod.name.toLowerCase().includes(searchQuery.toLowerCase()));
     }
     return products;
+    
   }
 
   return (
@@ -89,10 +90,8 @@ const Cart = () => {
           }
         </ListGroup>
       </div>
-      {/* className={`filters summary ${theme === 'light' ? 'lightFilter' : 'darkFilter'}`} */}
       <div className='checkoutCard'>
         <Card>
-          {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
           <Card.Body>
             <Card.Title>Subtotal ({cart.length}) items</Card.Title>
               <Card.Text>

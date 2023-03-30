@@ -132,11 +132,6 @@ given the remaining full space.
     flex-direction: column;
 }
 
-.summary {
-    right: 0;
-    z-index: 0;
-}
-
 .filterMenuIcon {
     cursor: pointer;
 }
