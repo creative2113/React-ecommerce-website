@@ -80,7 +80,6 @@
     flex-direction: column;
     width: 306px;
     height: 90vh;
-    z-index: 1;
 }
 
 .filters > span {
@@ -130,11 +129,6 @@ given the remaining full space.
     flex: 1;
     padding: 0 20px;
     flex-direction: column;
-}
-
-.summary {
-    right: 0;
-    z-index: 0;
 }
 
 .filterMenuIcon {

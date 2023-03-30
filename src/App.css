@@ -2,3 +2,8 @@ a {
     text-decoration: none !important;
     color: inherit !important;
 }
+
+body {
+    height: 100% !important;
+    max-height: 100% !important;
+}

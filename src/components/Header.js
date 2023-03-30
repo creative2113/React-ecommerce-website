@@ -25,11 +25,15 @@ const Header = () => {
     const [searchBarVisible, setsearchBarVisible] = useState(false); //searchbar (below searchbar- the one on smaller screen) visibility status 
 
     const themeHandler = () => { //toggles theme
+        let bodyBg = 'white';
         if(theme === 'light') {
             setTheme('dark');
-            return;
+            bodyBg = 'var(--pitchDark)';
         }
-        setTheme('light');
+        else {
+            setTheme('light');
+        }
+        document.body.style.background = bodyBg;
     }
 
     return (
