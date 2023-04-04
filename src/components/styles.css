@@ -179,7 +179,7 @@ given the remaining full space.
 }
 
 @media screen and (max-width: 499px) {
-    .product {
+    .product{
         flex-basis: 100%;
     }
 }
