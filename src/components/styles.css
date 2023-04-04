@@ -80,7 +80,6 @@
     flex-direction: column;
     width: 306px;
     height: 90vh;
-    z-index: 1;
 }
 
 .filters > span {
