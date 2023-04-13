@@ -28,7 +28,7 @@ const Home = () => {
     }
 
     if(byRating) {
-      sortedProducts = sortedProducts.filter(prod => prod.ratings >= byRating);
+      sortedProducts = sortedProducts.filter(prod => prod.ratings === byRating);
     }
 
     if(searchQuery) {
