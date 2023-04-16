@@ -7,6 +7,7 @@ import Rating from './Rating';
 import Form from 'react-bootstrap/Form';
 import { AiFillDelete } from 'react-icons/ai';
 import { useTheme } from '../context/ThemeContextProvider';
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
 
@@ -18,6 +19,7 @@ const Cart = () => {
   } = CartState();
 
   const [total, setTotal] = useState(); //for the subtotal
+  const [items, setItems] = useState(cart.length);
   
   // when cart items will get changed this will get executed, calculating the subtotal
   useEffect(() => {
@@ -25,6 +27,12 @@ const Cart = () => {
       cart.reduce(
         (acc, curr) => acc + Number(curr.price) * curr.qty, //function
         0 //initial val
+      )
+    );
+    setItems(
+      cart.reduce(
+        (acc, curr) => acc + Number(curr.qty),
+        0
       )
     );
   }, [cart]);
@@ -90,17 +98,23 @@ const Cart = () => {
           }
         </ListGroup>
       </div>
-      <div className='checkoutCard'>
-        <Card>
-          <Card.Body>
-            <Card.Title>Subtotal ({cart.length}) items</Card.Title>
-              <Card.Text>
-                Total: ₹ {total}
-              </Card.Text>
-            <Button variant="primary" disabled = {cart.length === 0}>Proceed to Checkout</Button>
-          </Card.Body>
-        </Card>
-      </div>
+      {
+        cart.length > 0 ? 
+        <div className='checkoutCard'>
+          <Card>
+            <Card.Body>
+              <Card.Title> SUBTOTAL: ₹ {total}</Card.Title>
+                <Card.Text>
+                  Total items: {items}
+                </Card.Text>
+                <Link to='/checkout' state = { total }>
+                  <Button variant="primary">Proceed to Checkout</Button>
+                </Link>
+            </Card.Body>
+          </Card>
+        </div> :
+        <h4 style={{textAlign: 'center'}}>Cart is Empty!</h4>
+      }
     </div>
   )
 }

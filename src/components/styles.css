@@ -161,6 +161,10 @@ given the remaining full space.
     margin: auto;
 }
 
+.checkoutCard .card {
+    border: none !important;
+}
+
 @media screen and (min-width: 965px) {
     .searchIcon {
         display: none;
