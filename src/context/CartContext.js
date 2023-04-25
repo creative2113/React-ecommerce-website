@@ -6,18 +6,22 @@ import { cartReducer, productReducer } from './Reducers';
 
 const Cart = createContext(); //name of the context
 
-faker.seed(99); 
 /**
  * since we know, faker generates random data every time the page gets rendered
  * to make the data static
  * using seed faker generates only one type of data
  * its not going to change everytime the data is called
  */
+faker.seed(99); 
 
 const CartContext = ({ children }) => {
 
-  // getting fake data from fakerjs api
-  const products = [...Array(20)].map(() => ({ //...Array(20) will create an arry with 20 undefined elements
+  /**
+   * getting fake data from fakerjs api
+   * ...Array(20) will create an arry with 20 undefined elements
+   * thus creating this object with fake data 20 times and storing in products array
+   */
+  const products = [...Array(20)].map(() => ({
     id: faker.datatype.uuid(),
     name: faker.commerce.productName(),
     price: faker.commerce.price(),
@@ -28,8 +32,8 @@ const CartContext = ({ children }) => {
   }));
   
   /**
-   * State: data or properties that need to be tracking in an application, in this case containing cart and products
-   * 
+   * useReducer Hook
+   * State: data or properties that need to be tracked in an application, in this case containing cart and products
    * dispatch : used to update the state
    */
   const [state, dispatch] = //useReducer Hook returns the current state and a dispatch method

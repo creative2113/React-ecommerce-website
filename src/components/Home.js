@@ -10,6 +10,9 @@ const Home = () => {
     productState: { sort, byStock, byFastDelivery, byRating, searchQuery }
   } = CartState();
 
+  /**
+   * @returns filtered products
+   */
   const transformProducts = () => {
     let sortedProducts = products;
 
