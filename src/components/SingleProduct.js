@@ -31,7 +31,7 @@ const SingleProduct = ({ prod }) => { //getting a product object as a prop
           <Card.Body className={`${theme === 'light' ? 'lightCard' : 'darkCard'}`}>
             <Card.Title>{prod.name}</Card.Title>
             <Card.Subtitle style={{ paddingBottom: 10 }}>
-              <span>₹ {prod.price.split('.')[0]}</span>
+              <span style={{fontSize: '1.2rem'}}>₹ {prod.price.split('.')[0]}</span>
               {prod.fastDelivery ? (
                 <div>Fast Delivery</div>
               ) : (
@@ -50,27 +50,30 @@ const SingleProduct = ({ prod }) => { //getting a product object as a prop
               cart.some(p => p.id === prod.id) ? 
 
                 (<Button
-                  onClick={() => {
-                    dispatch({ //passes type and payload
-                      type: 'REMOVE_FROM_CART',
-                      payload: prod //product that is currently being rendered
-                    });
-                    notifySuccess('Item removed successfully');
-                    
-                  }}
-                  variant='danger'>
-                    Remove from cart
+                    onClick={() => {
+                      dispatch({ //passes type and payload
+                        type: 'REMOVE_FROM_CART',
+                        payload: prod //product that is currently being rendered
+                      });
+                      notifySuccess('Item removed successfully');
+                      
+                    }}
+                    variant='danger'
+                    style={{fontSize: '0.9rem'}}
+                  >
+                      Remove from cart
                   </Button>) : 
 
                 (<Button 
-                  onClick={() => {
-                    dispatch({ 
-                      type: 'ADD_TO_CART',
-                      payload: prod //product that is currently being rendered
-                    });
-                    notifySuccess('Item added successfully');
-                  }}
-                  disabled={!prod.inStock}
+                    onClick={() => {
+                      dispatch({ 
+                        type: 'ADD_TO_CART',
+                        payload: prod //product that is currently being rendered
+                      });
+                      notifySuccess('Item added successfully');
+                    }}
+                    disabled={!prod.inStock}
+                    style={{fontSize: '0.9rem'}}
                   >
                     {!prod.inStock ? 'Out of Stock' : 'Add to Cart'}
                 </Button>)

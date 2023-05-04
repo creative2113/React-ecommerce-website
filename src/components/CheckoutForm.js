@@ -5,6 +5,7 @@ import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { useTheme } from '../context/ThemeContextProvider';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { CartState } from '../context/CartContext';
+import TestCards from './TestCards';
 
 const CheckoutForm = () => {
 
@@ -87,6 +88,7 @@ const CheckoutForm = () => {
 
   return (
     <div className='checkoutPage' ref={container}>
+      <TestCards />
       <form className='checkoutForm'>
         <div className="form-row">
             <label style={{color: theme === 'light' ? 'black':'white'}}>Name</label>

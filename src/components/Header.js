@@ -51,9 +51,9 @@ const Header = () => {
                             </Navbar.Brand>
                         </div>
 
-                        {/* only show the searchabr on larger screen (width > 965px) */}
+                        {/* only show the searchabr on larger screen (width > 1100px) */}
                         {
-                            windowSize.width > 965 && <SearchBar classes='searchBar' />
+                            windowSize.width > 1100 && <SearchBar classes='searchBar' />
                         }
 
                         {/* Containg the cart icon with dropdown of all the products in the cart */}
@@ -118,10 +118,10 @@ const Header = () => {
                     <Container>
 
                         {/* - Hamberger icon for sidebar toggling on smaller sceen
-                            - Only visible on smaller sceen ( width < 965) */}
+                            - Only visible on smaller sceen ( width < 1100) */}
                         <div 
                             className='navLeftItems filterMenuIcon' 
-                            style={{display: windowSize.width > 965 && 'none'}} 
+                            style={{display: windowSize.width > 1100 && 'none'}} 
                             onClick={() => setVisible(!visible)}
                         >
                             <FaBars fontSize='25px' />
@@ -133,7 +133,7 @@ const Header = () => {
                             {/* - Search bar for smaller screen
                                 - Only visible on smaller sceen and when searchBarVisible = true  */}
                             {
-                                searchBarVisible && windowSize.width <= 965 && <SearchBar />
+                                searchBarVisible && windowSize.width <= 1100 && <SearchBar />
                             }
 
                             {/* search button */}

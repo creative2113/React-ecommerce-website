@@ -6,7 +6,7 @@
     text-align: center;
     color: rgb(4, 166, 4);
   }
-  .checkoutForm {
+  .checkoutForm, .testCardsContainer {
     width: 29em;
     margin: auto;
   }
@@ -72,4 +72,9 @@
 
   .InputContainer {
     color: #fff;
+  }
+
+  #testCardInfo tbody tr td span {
+    display: inline-block;
+    margin-right: 8px;
   }

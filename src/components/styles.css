@@ -94,6 +94,8 @@
     /* grow shrink basis */
     flex: 1 0 23%; 
     margin: 10px;
+    max-width: 23rem;
+    min-width: 19rem;
 }
 
 .product img {
@@ -165,12 +167,12 @@ given the remaining full space.
     border: none !important;
 }
 
-@media screen and (min-width: 965px) {
+@media screen and (min-width: 1100px) {
     .searchIcon {
         display: none;
     }
 }
-@media screen and (max-width: 965px) {
+@media screen and (max-width: 1100px) {
     .productContainer {
         margin-left: 0;
     }

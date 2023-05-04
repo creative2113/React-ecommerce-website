@@ -24,13 +24,13 @@ const Filters = () => {
     return (
         <div 
             className={`filters ${theme === 'light' ? 'lightFilter' : 'darkFilter'}`} 
-            style={{display: windowSize.width <= 965 && !visible && 'none'}}
+            style={{display: windowSize.width <= 1100 && !visible && 'none'}}
         >
             <span className="title">Filter Products</span>
             <span>
                 <Form.Check
                     inline
-                    label='Ascending'
+                    label='Ascending Price'
                     name='group1'
                     type='radio'
                     id={`inline-1`}
@@ -44,7 +44,7 @@ const Filters = () => {
             <span>
                 <Form.Check
                     inline
-                    label='Descending'
+                    label='Descending Price'
                     name='group1'
                     type='radio'
                     id={`inline-2`}
