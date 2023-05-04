@@ -24,6 +24,10 @@ There is also a "clear filters" button that clears all the currently applied fil
 
 - This application is fully responsive.
 
+## Work Flow -
+
+<img src="src\images\ShopX.jpg" alt="An example image">
+
 ## Live project link -
 
 https://shopxreact.web.app/ 
@@ -47,4 +51,3 @@ https://shopxreact.firebaseapp.com/
 ![image](https://user-images.githubusercontent.com/67649413/224532173-6f66c9e5-e6a9-44c0-b7ce-196b10fd8da7.png)
 
 ![image](https://user-images.githubusercontent.com/67649413/224532191-2e48fa88-ca10-450c-8255-31ca701619a7.png)
-
