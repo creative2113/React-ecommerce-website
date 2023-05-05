@@ -7,7 +7,7 @@ import { CartState } from '../context/CartContext';
 const SearchBar = ({classes}) => {
 
     const { 
-        productDispatch
+        productFilterDispatch
     } = CartState();
   return (
     <>
@@ -15,7 +15,7 @@ const SearchBar = ({classes}) => {
             <FormControl
                 placeholder='Search a product'
                 className='m-auto'
-                onChange={e => productDispatch({
+                onChange={e => productFilterDispatch({
                     type: 'FILTER_BY_SEARCH',
                     payload: e.target.value,
                 })}

@@ -15,7 +15,7 @@ const Cart = () => {
   const {
     state: {cart},
     dispatch,
-    productState: { searchQuery }
+    productFilterState: { searchQuery }
   } = CartState();
 
   const [total, setTotal] = useState(); //for the subtotal

@@ -9,10 +9,10 @@ import { useWindowSize } from '../hooks/useWindowSize';
 import Rating from './Rating'
 
 const Filters = () => {
-    const { productState : {
+    const { productFilterState : {
                 byStock, byFastDelivery, sort, byRating
             }, 
-            productDispatch 
+            productFilterDispatch 
     } = CartState();
 
     const { theme } = useTheme();
@@ -34,7 +34,7 @@ const Filters = () => {
                     name='group1'
                     type='radio'
                     id={`inline-1`}
-                    onChange={() => productDispatch({
+                    onChange={() => productFilterDispatch({
                         type: 'SORT_BY_PRICE',
                         payload: 'lowToHigh',
                     })}
@@ -48,7 +48,7 @@ const Filters = () => {
                     name='group1'
                     type='radio'
                     id={`inline-2`}
-                    onChange={() => productDispatch({
+                    onChange={() => productFilterDispatch({
                         type: 'SORT_BY_PRICE',
                         payload: 'highToLow',
                     })}
@@ -62,7 +62,7 @@ const Filters = () => {
                     name='group1'
                     type='checkbox'
                     id={`inline-3`}
-                    onChange={() => productDispatch({
+                    onChange={() => productFilterDispatch({
                         type: 'FILTER_BY_STOCK',
                     })}
                     checked= {byStock}
@@ -75,7 +75,7 @@ const Filters = () => {
                     name='group1'
                     type='checkbox'
                     id={`inline-4`}
-                    onChange={() => productDispatch({
+                    onChange={() => productFilterDispatch({
                         type: 'FILTER_BY_DELIVERY',
                     })}
                     checked= {byFastDelivery}
@@ -86,7 +86,7 @@ const Filters = () => {
                 <Rating 
                     rating={byRating} 
                     style={{ cursor: 'pointer' }} 
-                    onClick={ i => productDispatch({
+                    onClick={ i => productFilterDispatch({
                         type: 'FILTER_BY_RATING',
                         payload: i + 1,
                     })}
@@ -94,7 +94,7 @@ const Filters = () => {
             </span>
             <Button 
                 variant='light' 
-                onClick={() => productDispatch({
+                onClick={() => productFilterDispatch({
                     type: 'CLEAR_FILTERS'
                 })}
             >

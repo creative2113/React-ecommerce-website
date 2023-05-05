@@ -1,6 +1,6 @@
-//containing the main reducer functions for CART
-
 /**
+ * containing reducer function for cart and filter
+ * 
  * Reducers take in two things: previous state and an action. 
  * Then they reduce it (read it return) to one entity: the new updated instance of state. 
  * So reducers are basically pure JS functions which take in the previous state and an action and return the newly updated state.
@@ -40,7 +40,7 @@ export const cartReducer = (state, action) => {
     }
 };
 
-export const productReducer = (state, action) => {
+export const productFilterReducer = (state, action) => {
     switch(action.type) {
         case 'SORT_BY_PRICE':
             return { ...state, sort:action.payload }; //adding sort variable 

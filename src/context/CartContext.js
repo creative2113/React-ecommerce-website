@@ -1,8 +1,19 @@
-// context for managing the cart state
+/**
+ * context for managing the cart state
+ * with two reducers - in 42, 54
+ * One for manupulating cart ("products" and "cart")
+ * Another for manupulating "filters"
+ * 
+ * "products" in 31, will be rendered from fakerJs
+ * "cart" will be initially [] - empty
+ * "filters" will be initially false, 0 and empty
+ * 
+ * Exposing the reducer states, and dispatch methods in the cart context 
+ */
 
 import React, { createContext, useContext, useReducer } from 'react'
 import { faker } from '@faker-js/faker';
-import { cartReducer, productReducer } from './Reducers';
+import { cartReducer, productFilterReducer } from './Reducers';
 
 const Cart = createContext(); //name of the context
 
@@ -32,7 +43,7 @@ const CartContext = ({ children }) => {
   }));
   
   /**
-   * useReducer Hook
+   * useReducer Hook for cart
    * State: data or properties that need to be tracked in an application, in this case containing cart and products
    * dispatch : used to update the state
    */
@@ -45,7 +56,10 @@ const CartContext = ({ children }) => {
       }
   );
 
-  const [productState, productDispatch] = useReducer(productReducer, {
+  /**
+   * Reducer for product filters
+   */
+  const [productFilterState, productFilterDispatch] = useReducer(productFilterReducer, {
     byStock: false,
     byFastDelivery: false,
     byRating: 0,
@@ -59,7 +73,7 @@ const CartContext = ({ children }) => {
      * which we can see at the starting point of our app - index.js
      * so, all children will have access to the state and dispatch function
      * */ 
-    <Cart.Provider value={{ state, dispatch, productState, productDispatch }}>
+    <Cart.Provider value={{ state, dispatch, productFilterState, productFilterDispatch }}>
         {children} 
     </Cart.Provider>
   )

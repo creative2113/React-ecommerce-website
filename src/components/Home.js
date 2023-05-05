@@ -7,7 +7,7 @@ import './styles.css';
 const Home = () => {
   const { 
     state: { products }, //destructuring
-    productState: { sort, byStock, byFastDelivery, byRating, searchQuery }
+    productFilterState: { sort, byStock, byFastDelivery, byRating, searchQuery }
   } = CartState();
 
   /**
