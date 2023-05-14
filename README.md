@@ -35,19 +35,5 @@ or
 https://shopxreact.firebaseapp.com/
 
 ## Preview -
+![image](https://github.com/DebasmitaMallick/React-e-Commerce-Website/assets/67649413/58c4127e-012b-4288-8aac-153c57f549f1)
 
-![image](https://user-images.githubusercontent.com/67649413/224531899-7355b63b-87ce-4c91-a662-b3b011cc0aba.png)
-
-![image](https://user-images.githubusercontent.com/67649413/224532030-2e269498-05dc-41c5-a1f9-07b62b55a97c.png)
-
-![image](https://user-images.githubusercontent.com/67649413/224532051-e49421ef-9795-4234-b880-64d3761deef8.png)
-
-![image](https://user-images.githubusercontent.com/67649413/224532082-fec01009-34b6-4d32-a600-e889ce8375e5.png)
-
-![image](https://user-images.githubusercontent.com/67649413/224532103-6c3f2e58-98a6-488e-981f-10a0a5add8a5.png)
-
-![image](https://user-images.githubusercontent.com/67649413/224532118-3109c582-9ebe-4b4a-b299-20ad059ad5e3.png)
-
-![image](https://user-images.githubusercontent.com/67649413/224532173-6f66c9e5-e6a9-44c0-b7ce-196b10fd8da7.png)
-
-![image](https://user-images.githubusercontent.com/67649413/224532191-2e48fa88-ca10-450c-8255-31ca701619a7.png)
